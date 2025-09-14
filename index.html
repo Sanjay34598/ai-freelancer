@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI-Powered Freelancer Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#4F46E5',
+              'brand-secondary': '#7C3AED',
+              'brand-light': '#A5B4FC',
+              'brand-dark': '#312E81',
+              'surface-main': '#111827',
+              'surface-card': '#1F2937',
+              'surface-input': '#374151',
+              'text-primary': '#F9FAFB',
+              'text-secondary': ' #D1D5DB',
+              'text-accent': '#C7D2FE',
+            },
+            animation: {
+                'gradient-x': 'gradient-x 15s ease infinite',
+                'fade-in': 'fade-in 0.3s ease-out forwards',
+            },
+            keyframes: {
+                'gradient-x': {
+                    '0%, 100%': {
+                        'background-size':'200% 200%',
+                        'background-position': 'left center'
+                    },
+                    '50%': {
+                        'background-size':'200% 200%',
+                        'background-position': 'right center'
+                    }
+                },
+                'fade-in': {
+                    '0%': { opacity: '0', transform: 'scale(0.95)' },
+                    '100%': { opacity: '1', transform: 'scale(1)' },
+                }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.19.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-surface-main">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
